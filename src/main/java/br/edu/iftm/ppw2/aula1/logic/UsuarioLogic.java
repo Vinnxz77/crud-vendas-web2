@@ -5,7 +5,8 @@ import br.edu.iftm.ppw2.aula1.entity.Usuario;
 import br.edu.iftm.ppw2.aula1.util.exception.ErroSistemaException;
 import java.util.List;
 
-public class UsuarioLogic implements GenericLogic<Usuario> {
+@jakarta.enterprise.context.Dependent
+public class UsuarioLogic implements GenericLogic<Usuario>, java.io.Serializable {
 
     private UsuarioDAO dao = new UsuarioDAO();
     

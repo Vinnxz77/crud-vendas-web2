@@ -6,7 +6,7 @@ import br.edu.iftm.ppw2.aula1.util.exception.ErroSistemaException;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class GenericCrud<E, L extends GenericLogic<E>> extends JSFUtil{
+public abstract class GenericCrud<E, L extends GenericLogic<E>> extends JSFUtil implements java.io.Serializable{
 
     private E entidade;
     private List<E> entidades = new ArrayList<>();

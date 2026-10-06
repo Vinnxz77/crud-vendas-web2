@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html" xmlns:ui="jakarta.faces.facelets" xmlns:p="http://primefaces.org/ui">
+<h:head><title><ui:insert name="titulo">Catálogo de vendas</ui:insert></title><meta name="viewport" content="width=device-width, initial-scale=1"/><h:outputStylesheet library="css" name="estilo.css"/></h:head>
+<h:body><header><div class="marca"><h:graphicImage library="sistema" name="img/if_sistemas.png" style="height:38px;vertical-align:middle;margin-right:12px"/>VENDAS<span>IFTM · Catálogo e estoque</span></div><nav><h:link outcome="/index" value="Início"/><h:link outcome="/marcas" value="Marcas"/><h:link outcome="/categorias" value="Categorias"/><h:link outcome="/produtos" value="Produtos"/></nav></header>
+<main><ui:insert name="conteudo"/></main>
+<h:form><p:confirmDialog global="true" showEffect="fade" hideEffect="fade" responsive="true" width="350"><p:commandButton value="Cancelar" type="button" styleClass="ui-confirmdialog-no ui-button-secondary"/><p:commandButton value="Excluir" type="button" styleClass="ui-confirmdialog-yes ui-button-danger"/></p:confirmDialog></h:form>
+<footer>Programação WEB 2 · JSF / PrimeFaces / Hibernate / PostgreSQL</footer></h:body></html>

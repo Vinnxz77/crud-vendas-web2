@@ -11,13 +11,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsuarioDAO {
+public class UsuarioDAO implements java.io.Serializable {
 
     private String url = "jdbc:postgresql://localhost:5432/sistema_financeiro";
     private String usuario_banco = "postgres";
     private String senha = "123456";
 
-    private Connection conexao = null;
+    private transient Connection conexao = null;
 
     private Connection getConexao() {
         try {

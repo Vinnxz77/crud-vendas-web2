@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
-@WebServlet(name = "HelloServlet", urlPatterns = {"*.png"})
+@WebServlet(name = "HelloServlet", urlPatterns = {"/exemplo-imagem-aula"})
 public class HelloServlet extends HttpServlet {
 
     /**
