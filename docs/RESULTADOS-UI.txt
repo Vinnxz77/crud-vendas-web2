@@ -1,0 +1,14 @@
+PASS criação de marca
+PASS duplicidade normalizada
+PASS edição de marca
+PASS bloqueio marca vinculada
+PASS exclusão de marca
+PASS criação e caminho de categoria
+PASS descendente indisponível como pai
+PASS exclusão bloqueada de raiz com filha
+PASS movimentação de categoria
+PASS exclusão de categorias sem vínculos
+PASS edição de produto, upload, miniatura e servlet
+PASS criação de produto
+PASS exclusão de produto
+PASS captura de interface móvel
