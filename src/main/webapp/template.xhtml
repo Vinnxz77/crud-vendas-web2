@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="sistema" name="css/admin.css"></h:outputStylesheet>
+    </h:head>
+    <h:body>
+        <div class="container-flex">
+            <header class="header-flex">
+                <a href="#{request.contextPath}"  class="logo">
+                    <h:graphicImage library="sistema" name="img/if_sistemas.png"></h:graphicImage>
+                </a>
+                <h:form>
+                    <p:menubar>
+                        <p:menuitem value="Dashboard" icon="pi pi-gauge" url="index.xhtml"></p:menuitem>
+                        <p:submenu label="Cadastros" icon="pi pi-file-check">
+                            <p:menuitem value="Usuários" icon="pi pi-user" url="usuario.xhtml"></p:menuitem>
+                        </p:submenu>
+                    </p:menubar>
+                </h:form>
+            </header>
+            <main class="main-admin">
+                <div class="conteudo-paginas">
+                    <p:panel>
+                        <f:facet name="header">
+                            <div class="titulo-"><i class="pi pi-arrow-circle-right"></i> #{not empty titulo?titulo:"IF Sistemas"}</div> 
+                        </f:facet>
+                        <p:messages showDetail="true">
+                            <p:autoUpdate></p:autoUpdate>
+                        </p:messages>
+                        <p:growl showDetail="true">
+                            <p:autoUpdate></p:autoUpdate>
+                        </p:growl>
+                        <ui:insert></ui:insert>
+                    </p:panel>
+                </div>
+            </main>
+            <footer class="footer-template">
+                IFTM Sistemas - 2026
+            </footer>
+        </div>
+
+    </h:body>
+</html>

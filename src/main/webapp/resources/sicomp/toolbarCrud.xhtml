@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="jakarta.faces.composite"
+      xmlns:p="primefaces">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:attribute name="crudBean" required="true" shortDescription="Barra usada em conjunto com o crud. Necessário passar a classe CrudBean."></cc:attribute>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <p:toolbar>
+            <p:toolbarGroup>
+                <p:commandButton value="#{cc.attrs.crudBean.estadoCrud == 'LISTAR'?'Listar':'Voltar'}" 
+                                 icon="pi pi-#{cc.attrs.crudBean.estadoCrud == 'LISTAR'?'search':'arrow-left'}"
+                                 actionListener="#{cc.attrs.crudBean.listar()}" update="@form">
+                </p:commandButton>
+                <p:spacer width="5px"></p:spacer>
+                <p:commandButton value="Novo" icon="pi pi-file" actionListener="#{cc.attrs.crudBean.novo()}" update="@form"></p:commandButton>
+                <p:commandButton value="Salvar" icon="pi pi-save" rendered="#{cc.attrs.crudBean.estadoCrud != 'LISTAR'}" actionListener="#{cc.attrs.crudBean.salvar()}" update="@form"></p:commandButton>
+            </p:toolbarGroup>
+            <p:toolbarGroup align="right">
+                <cc:insertChildren></cc:insertChildren>
+            </p:toolbarGroup>
+        </p:toolbar>
+    </cc:implementation>
+</html>

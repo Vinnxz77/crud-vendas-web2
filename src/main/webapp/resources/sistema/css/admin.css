@@ -1,0 +1,71 @@
+:root {
+    --header-bg: rgba(94, 140, 209, 1);
+    --menu-text-color: #fff;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-admin {
+    flex: 1;
+}
+
+.footer-template {
+    border-top: 1px solid rgba(0,0,0,0.2);
+    padding: 10px;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    background: var(--header-bg);
+    height: 64px;
+    padding: 0 10px;
+}
+
+.logo {
+    display: block;
+}
+.logo img {
+    height: 48px;
+}
+
+.titulo-paginas {
+    padding: 15px 20px;
+    font-size: 1.5em;
+}
+.titulo-paginas i {
+    font-size: 1.3rem;
+}
+.conteudo-paginas {
+        padding: 15px 20px;
+}
+.ui-menubar {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important; /* Optional: removes the border if desired */
+}
+
+body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link .ui-menuitem-text {
+    color: var(--menu-text-color);
+}
+body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link .ui-menuitem-icon {
+    color: var(--menu-text-color);
+}
+/* If you also want the inner lists/items to be transparent */
+.ui-menubar .ui-menu-list, 
+.ui-menubar .ui-menuitem {
+    background:  var(--header-bg)!important;
+}
+
+body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover {
+     background:  rgba(255, 255, 255, 0.3) !important;
+}

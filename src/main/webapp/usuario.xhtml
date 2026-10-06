@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:ui="jakarta.faces.facelets"
+                template="/template.xhtml"
+                xmlns:p="primefaces"
+                xmlns:si="jakarta.faces.composite/sicomp">
+    <ui:param name="titulo" value="Gerenciar Usuários"></ui:param>
+    <h:form>
+        <si:toolbarCrud crudBean="#{usuarioBean}">
+            <p:button value="Exportar"></p:button>
+        </si:toolbarCrud>
+
+        <p:panelGrid columns="2" rendered="#{usuarioBean.estadoCrud != 'LISTAR'}">
+            <p:outputLabel for="@next" value="Nome"></p:outputLabel>
+            <p:inputText value="#{usuarioBean.entidade.nome}"></p:inputText>
+            <p:outputLabel for="@next" value="Email"></p:outputLabel>
+            <p:inputText value="#{usuarioBean.entidade.email}" disabled="#{usuarioBean.estadoCrud == 'ATUALIZAR'}"></p:inputText>
+            <p:outputLabel for="@next" value="Senha"></p:outputLabel>
+            <p:inputText value="#{usuarioBean.entidade.senha}"></p:inputText>
+        </p:panelGrid>
+        <p:dataTable value="#{usuarioBean.entidades}" var="u" rendered="#{usuarioBean.estadoCrud == 'LISTAR'}">
+            <p:column>
+                <p:commandButton value="Editar" actionListener="#{usuarioBean.editar(u)}" update="@form"></p:commandButton>
+            </p:column>
+            <p:column headerText="Id">
+                #{u.id}
+            </p:column>
+            <p:column headerText="Nome">
+                #{u.nome}
+            </p:column>
+            <p:column headerText="Email">
+                #{u.email}
+            </p:column>
+        </p:dataTable>
+    </h:form>
+</ui:composition>
