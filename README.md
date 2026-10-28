@@ -4,7 +4,6 @@ Atividade de Programação WEB 2: marcas, categorias recursivas e produtos com u
 
 ## Integrantes
 - Vinícius de Freitas Machado
-- Acrescentar os nomes dos demais integrantes, se houver.
 
 ## Tecnologias
 Java 17, Maven 3.9, Jakarta EE 11 / Faces 4.1.14, PrimeFaces 15.0.0 (Jakarta), Weld 6.0.4, Hibernate 7.0.2, Hibernate Validator 9.0.1, PostgreSQL 16 e Tomcat 11.0.2. As versões estão fixadas para reprodução acadêmica; não são uma declaração de versões mais recentes. Esta entrega estende o projeto base `ppw2-java-web-maven` enviado pelo professor. Os exemplos da aula foram preservados em `br.edu.iftm.ppw2.aula1`; o módulo exigido está em `br.edu.vendas`. Veja `docs/ADAPTACOES-BASE.md`.
